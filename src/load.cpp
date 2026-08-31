@@ -117,7 +117,7 @@ Dataset load_dataset(const string& dataset) {
         cite_file.close();
 
         string cora_test = "../cora/cora_test.txt";
-        vector<int> test_index = select_data(cora_test, feats.size(), 128);
+        vector<int> test_index = select_data(cora_test, feats.size(), 902);
         sort(test_index.begin(), test_index.end());
 
         return {feats, labels, adj_map, test_index};
@@ -178,7 +178,7 @@ Dataset load_dataset(const string& dataset) {
         }
         cite_file.close();
         string citeseer_test = "../citeseer/citeseer_test.txt";
-        vector<int> test_index = select_data(citeseer_test, feats.size(), 128);
+        vector<int> test_index = select_data(citeseer_test, feats.size(), 937);
         sort(test_index.begin(), test_index.end());
 
         return {feats, labels, adj_map, test_index};
